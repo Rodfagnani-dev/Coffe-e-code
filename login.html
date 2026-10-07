@@ -23,18 +23,21 @@
                 <p>Encontre profissionais para resolver seus serviços de forma simples.</p>
             </div>
 
-            <form class="form" action="dashboard.html" method="get">
+            <form class="form" id="login-form" action="dashboard.html" method="get" novalidate>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input class="input" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+                    <input class="input" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" aria-describedby="email-error" required>
+                    <span class="form-error" id="email-error" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input class="input" type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                    <input class="input" type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" aria-describedby="senha-error" required>
+                    <span class="form-error" id="senha-error" aria-live="polite"></span>
                 </div>
 
                 <button class="button button-primary button-full" type="submit">Entrar</button>
+                <p class="form-feedback" id="login-feedback" aria-live="polite"></p>
             </form>
 
             <p class="auth-footer-text">
@@ -47,5 +50,6 @@
     <footer class="site-footer">
         <p>&copy; 2026 FixAqui. Projeto acadêmico.</p>
     </footer>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
